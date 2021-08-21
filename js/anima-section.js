@@ -19,11 +19,10 @@ export default class animaSection {
 
   checarDistancia() {
     this.distancias.forEach((sessao) => {
-      const sessaoVisivel = Math.floor(sessao.topo - window.innerHeight / 1.5);
+      const sessaoVisivel = Math.floor(sessao.topo - window.innerHeight * 0.75);
 
       if (window.pageYOffset > sessaoVisivel) {
         sessao.elemento.classList.add("ativo");
-        console.log("oi");
       }
     });
   }

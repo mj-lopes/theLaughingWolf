@@ -576,16 +576,6 @@ footer {
   }
 }
 
-[data-animaScroll] {
-  opacity: 0;
-  will-change: opacity;
-}
-
-[data-animaScroll].ativo {
-  opacity: 1;
-  transition: 0.3s;
-}
-
 @keyframes flickLogo {
   0%,
   18%,
@@ -622,5 +612,54 @@ footer {
   24%,
   55% {
     filter: none;
+  }
+}
+
+[data-anima="left"].ativo {
+  animation: animaLeft 0.6s forwards;
+}
+
+[data-anima="right"].ativo {
+  animation: animaRight 0.6s forwards;
+}
+
+[data-anima="top"].ativo {
+  animation: animaTop 0.6s forwards;
+}
+
+[data-anima] {
+  opacity: 0;
+}
+
+@keyframes animaLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animaRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animaTop {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
