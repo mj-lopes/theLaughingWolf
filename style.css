@@ -1,0 +1,623 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ESTILOS GERAIS */
+
+h1 {
+  font-family: "Sunset Club Free Trial", Arial, Helvetica, sans-serif;
+  color: #fff7fe;
+  font-weight: 400;
+}
+
+li,
+p,
+a,
+span,
+button,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  justify-content: space-around;
+
+  padding: 16px calc((100% - 1180px) / 2);
+
+  background: linear-gradient(
+    90deg,
+    rgba(25, 1, 22, 1) 0%,
+    rgba(91, 11, 79, 1) 100%
+  );
+}
+
+header .logo-marca {
+  display: flex;
+
+  align-items: center;
+  gap: 16px;
+  margin-left: 16px;
+}
+
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 32px;
+}
+
+nav ul a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: #fff7fe;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover {
+  color: #ea59cd;
+}
+nav ul li + li::before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px;
+  width: 2px;
+  height: 18px;
+  background: #3e0736;
+}
+
+header .btn-ingressos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header button {
+  background: none;
+  border: none;
+  text-align: center;
+  position: relative;
+  max-width: 110px;
+
+  cursor: pointer;
+  color: #fff7fe;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+header .arrow path {
+  animation: anima 0.8s infinite alternate;
+}
+
+header .arrow svg.segunda path {
+  animation-delay: 0.4s;
+}
+
+header .arrow svg.terceira path {
+  animation-delay: 0.6s;
+}
+
+@keyframes anima {
+  from {
+    stroke: #ea59cd;
+  }
+  to {
+    stroke: #ea59cd00;
+  }
+}
+
+/* INTRODUCAO */
+
+.introducao {
+  padding: 0 calc((100% - 1140px) / 2);
+  background: url("./imgs/intro-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.introducao .logo-marca {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding-top: 32px;
+}
+
+.img-intro {
+  flex: 1 1 190px;
+  margin: 0 16px;
+}
+
+.logo {
+  animation: flickLogo 1.5s infinite alternate;
+}
+
+.marca {
+  animation: flickMarca 1.5s infinite alternate;
+}
+
+.funcionamento {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #fff7fe;
+}
+
+.funcionamento h2::after {
+  content: "";
+  display: block;
+  width: 128px;
+  margin: 4px auto 6px auto;
+  height: 2px;
+  background: #fff7fe;
+
+  box-shadow: 0 0 2px 0px #fff7fe, 0 0 4px 1px #3e0736, 0 0 6px 1px #3e0736,
+    0 0 9px 1px #3e0736;
+}
+
+.funcionamento span + span::before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px;
+  width: 2px;
+  height: 12px;
+  background: #3e0736;
+}
+
+@media screen and (max-width: 500px) {
+  .img-intro {
+    max-width: 50vw;
+    margin-bottom: 32px;
+  }
+
+  .funcionamento {
+    margin-bottom: 32px;
+  }
+}
+
+/* PRÓXIMOS EVENTOS */
+
+section.proximos-eventos {
+  padding: 64px 0;
+  background: linear-gradient(
+    180deg,
+    #090008,
+    #0a0009,
+    #0c010a,
+    #0d010b,
+    #0e010c,
+    #0f010d,
+    #10020e,
+    #11020f
+  );
+}
+
+.proximos-eventos h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  max-width: 250px;
+  font-size: 4em;
+  line-height: 4rem;
+  color: #fff7fe;
+
+  text-shadow: 0 0 1px #fff7fe, 0 0 5px #fff7fe, 0 0 19px #fff7fe,
+    0 0 40px rgba(133, 0, 159, 1), 0 0 60px rgba(133, 0, 159, 1),
+    0 0 100px rgba(133, 0, 159, 1);
+}
+
+.slide-wrapper {
+  padding-top: 32px;
+  overflow: hidden;
+}
+
+.proximos-eventos ul {
+  display: flex;
+  gap: 64px;
+
+  position: relative;
+}
+
+.proximos-eventos .data-apresentacao {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  display: block;
+  max-width: 80px;
+  text-align: center;
+
+  transform: rotate(-45deg);
+
+  font-family: "Sunset Club Free Trial", Arial, Helvetica, sans-serif;
+  line-height: 3rem;
+  font-size: 3em;
+  color: #fff7fe;
+
+  text-shadow: 0 0 15px #ea59cd;
+}
+
+.proximos-eventos li {
+  flex-shrink: 0;
+  width: 80vw;
+  max-width: 800px;
+
+  opacity: 0.4;
+  transform: scale(0.8);
+}
+
+.proximos-eventos li.active {
+  opacity: 1;
+  transform: scale(1);
+
+  transition: 0.4s;
+}
+
+li .show-descricao {
+  display: none;
+  text-align: center;
+}
+
+li.active .show-descricao {
+  display: block;
+}
+
+li.active img {
+  box-shadow: 0 0 5px #ea59cd;
+}
+
+.show-descricao h2 {
+  color: #ea59cd;
+  font-weight: normal;
+  margin: 16px 0 8px 0;
+}
+
+.show-descricao p {
+  max-width: 500px;
+  margin: 0 auto;
+
+  color: #fff7fe;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+/* CLUBE INFO */
+
+.info {
+  background: url("./imgs/clube-bg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 64px calc((100% - 1180px) / 2);
+}
+
+.info > div.clube-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  text-align: right;
+}
+
+.info > div.clube-info:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.clube-img {
+  margin: 0 32px;
+  flex: 1 1 300px;
+}
+
+.clube-img img {
+  border-radius: 15px;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.clube-info .dados-clube {
+  flex: 1 2 300px;
+  display: block;
+  max-width: 500px;
+  margin: 0 32px;
+}
+
+.dados-clube h1 {
+  font-size: 4rem;
+  margin-bottom: 32px;
+  text-transform: capitalize;
+
+  text-shadow: 0 0 1px #fff7fe, 0 0 5px #fff7fe, 0 0 19px #fff7fe,
+    0 0 40px rgba(133, 0, 159, 1), 0 0 60px rgba(133, 0, 159, 1),
+    0 0 100px rgba(133, 0, 159, 1);
+}
+
+.dados-clube p {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  color: #fff7fe;
+}
+
+.dados-clube p + p {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 730px) {
+  .info > div.clube-info,
+  .info > div.clube-info:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .clube-img {
+    max-width: 300px;
+  }
+
+  .clube-info .dados-clube {
+    margin-top: 16px;
+  }
+}
+
+/* CONTATO E LOCALIZACO */
+
+.contato-e-localizacao {
+  padding: 0 calc((100% - 1180px) / 2);
+
+  background: linear-gradient(
+    180deg,
+    #1a0116,
+    #1f041a,
+    #23071f,
+    #280823,
+    #2d0928,
+    #33082d,
+    #380831,
+    #3e0736
+  );
+}
+
+.contato-e-localizacao > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.contato {
+  max-width: 40vw;
+  margin-left: 32px;
+  flex: 1 1 200px;
+}
+
+.mapa-img {
+  flex: 1 2 375px;
+  width: 50vw;
+  max-width: 600px;
+}
+
+.mapa-img img {
+  border-radius: 0;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.contato-e-localizacao h1 {
+  margin: 32px 0;
+  text-align: center;
+
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #fff7fe;
+  line-height: 1em;
+
+  text-shadow: 0 0 1px #fff7fe, 0 0 5px #fff7fe, 0 0 19px #fff7fe,
+    0 0 40px rgba(133, 0, 159, 1), 0 0 60px rgba(133, 0, 159, 1),
+    0 0 100px rgba(133, 0, 159, 1);
+}
+
+.meios-contato li {
+  color: #fff7fe;
+  margin-bottom: 32px;
+}
+
+.meios-contato li p {
+  margin-left: 64px;
+  line-height: 1.5em;
+}
+
+.meios-contato li p span {
+  color: #ea59cd;
+  font-weight: bold;
+}
+
+.meios-contato h2 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.meios-contato h2::before {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 16px;
+}
+
+.meios-contato li:nth-of-type(1) h2::before {
+  content: url("./imgs/telefone.svg");
+}
+
+.meios-contato li:nth-of-type(2) h2::before {
+  content: url("./imgs/email.svg");
+}
+
+.meios-contato li:nth-of-type(3) h2::before {
+  content: url("./imgs/endereco.svg");
+}
+
+.meios-contato li:nth-of-type(4) h2::before {
+  content: url("./imgs/relogio.svg");
+}
+
+@media screen and (max-width: 730px) {
+  .contato-e-localizacao {
+    flex-direction: column;
+  }
+
+  .contato {
+    max-width: 100%;
+  }
+
+  .mapa-img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  padding: 32px calc((100% - 1140px) / 2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(
+    45deg,
+    #190116,
+    #1d021a,
+    #22021d,
+    #260321,
+    #2a0425,
+    #2e0529,
+    #33062c,
+    #370730
+  );
+}
+
+.trademark {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 32px;
+
+  color: #ea59cd;
+}
+
+.redes-sociais ul {
+  display: flex;
+  gap: 16px;
+  margin: 0 32px;
+}
+
+.redes-sociais button {
+  background: none;
+  border: none;
+}
+
+.redes-sociais img {
+  border-radius: 0;
+}
+
+.redes-sociais button:hover {
+  cursor: pointer;
+  filter: sepia(0.5);
+}
+
+@media screen and (max-width: 730px) {
+  .trademark {
+    flex-direction: column;
+    text-align: center;
+    max-width: 25vw;
+  }
+}
+
+[data-animaScroll] {
+  opacity: 0;
+  will-change: opacity;
+}
+
+[data-animaScroll].ativo {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+@keyframes flickLogo {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    filter: drop-shadow(0px 0px 4px rgba(255, 247, 254, 0.5))
+      drop-shadow(0px 0px 8px rgba(133, 0, 159, 1))
+      drop-shadow(0px 0px 13px rgba(133, 0, 159, 0.8))
+      drop-shadow(0px 0px 15px rgba(133, 0, 159, 0.6));
+  }
+  20%,
+  24%,
+  55% {
+    filter: none;
+  }
+}
+
+@keyframes flickMarca {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    filter: drop-shadow(0 0 2px #fff7fe) drop-shadow(0 0 5px #fff7fe)
+      drop-shadow(0 0 19px #fff7fe) drop-shadow(0 0 40px rgba(133, 0, 159, 1))
+      drop-shadow(0 0 80px rgba(133, 0, 159, 0.8));
+  }
+  20%,
+  24%,
+  55% {
+    filter: none;
+  }
+}
