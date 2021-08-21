@@ -102,6 +102,8 @@ header .btn-ingressos {
   display: flex;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
+  margin: 0 16px;
 }
 
 header button {
@@ -112,6 +114,7 @@ header button {
   max-width: 110px;
 
   cursor: pointer;
+
   color: #fff7fe;
   font-weight: bold;
   font-size: 1.5rem;
