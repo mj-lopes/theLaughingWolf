@@ -142,6 +142,80 @@ header .arrow svg.terceira path {
   }
 }
 
+.menu-mobile {
+  display: none;
+
+  background: #ea59cd;
+  border-radius: 5px;
+  padding: 15px;
+  color: #090008;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: row-reverse;
+  }
+
+  .logo-marca {
+    flex: 1;
+  }
+
+  nav {
+    flex: none;
+  }
+
+  [data-mobile="btn"] {
+    display: block;
+  }
+
+  [data-mobile="nav"] {
+    display: none;
+  }
+
+  [data-mobile="nav"].ativo {
+    position: absolute;
+    top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: #11020f;
+    border-radius: 5px;
+
+    z-index: 1000;
+
+    animation: mobileAnimation 0.4s forwards;
+  }
+
+  @keyframes mobileAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  [data-mobile="nav"] li a {
+    padding: 8px;
+    margin: 4px;
+    font-size: 1rem;
+  }
+
+  [data-mobile="nav"] div.btn-ingressos {
+    padding-bottom: 16px;
+  }
+
+  [data-mobile="nav"] li + li::before {
+    content: none;
+  }
+}
+
 /* INTRODUCAO */
 
 .introducao {
