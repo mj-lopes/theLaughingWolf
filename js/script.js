@@ -13,3 +13,4 @@ const scrollToSection = new ScrollSuave('a[href^="#"]');
 scrollToSection.init();
 
 const mobileNav = new menuMobile('[data-mobile="btn"]', '[data-mobile="nav"]');
+mobileNav.init();

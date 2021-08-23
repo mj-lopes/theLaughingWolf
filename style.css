@@ -106,7 +106,7 @@ header .btn-ingressos {
   margin: 0 16px;
 }
 
-header button {
+header nav button {
   background: none;
   border: none;
   text-align: center;
@@ -142,24 +142,23 @@ header .arrow svg.terceira path {
   }
 }
 
-.menu-mobile {
+[data-mobile="btn"] {
   display: none;
 
   background: #ea59cd;
   border-radius: 5px;
-  padding: 15px;
-  color: #090008;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 10px;
+  border: none;
 }
 
 @media screen and (max-width: 700px) {
   header {
     flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 
-  .logo-marca {
-    flex: 1;
+  header .logo-marca {
+    display: none;
   }
 
   nav {
@@ -176,7 +175,7 @@ header .arrow svg.terceira path {
 
   [data-mobile="nav"].ativo {
     position: absolute;
-    top: 90px;
+    top: 53px;
 
     display: flex;
     flex-direction: column;
@@ -397,6 +396,13 @@ li.active img {
   line-height: 1.5rem;
 }
 
+@media screen and (max-width: 730px) {
+  .proximos-eventos h1 {
+    font-size: 3rem;
+    padding-bottom: 16px;
+  }
+}
+
 /* CLUBE INFO */
 
 .info {
@@ -457,6 +463,18 @@ li.active img {
 }
 
 @media screen and (max-width: 730px) {
+  .info {
+    padding-bottom: 1px;
+  }
+
+  .dados-clube h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+  .dados-clube p {
+    font-size: 1rem;
+  }
+
   .info > div.clube-info,
   .info > div.clube-info:nth-child(even) {
     flex-direction: column;
@@ -581,6 +599,10 @@ li.active img {
     flex-direction: column;
   }
 
+  .contato-e-localizacao h1 {
+    font-size: 3rem;
+  }
+
   .contato {
     max-width: 100%;
   }
@@ -588,6 +610,10 @@ li.active img {
   .mapa-img {
     max-width: 100%;
     width: 100%;
+  }
+
+  .meios-contato li p {
+    margin-left: 0;
   }
 }
 
