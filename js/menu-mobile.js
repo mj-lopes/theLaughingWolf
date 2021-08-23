@@ -14,7 +14,7 @@ export default class menuMobile {
   clicouBotao(event) {
     event.preventDefault();
     this.nav.classList.toggle("ativo");
-    outsideClick(this.nav, "ativo", () => {
+    outsideClick(this.nav, () => {
       this.nav.classList.remove("ativo");
     });
   }
